@@ -21,18 +21,24 @@ const everyOtherItem = (items) => {
   for (const i in items) {
     if (i % 2 === 0) {
       result.push(items[i]);
-      console.log(i);
     }
   }
   console.log(result);
 
 };
 
+const nums = [1, 30, 4, 21, 100000];
 
 /** 3. smallestNItems */
 const smallestNItems = (items, n) => {
 	// Replace this with your code
+  const sorted_items = items.sort((a, b) => a - b);
+  const sliced_list = sorted_items.slice(0, n);
+  sliced_list.reverse();
+  console.log(sliced_list);
+
 };
 
 // printIndices(items);
-everyOtherItem(items);
+// everyOtherItem(items);
+smallestNItems(nums, 3);
